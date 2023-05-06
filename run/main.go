@@ -20,7 +20,15 @@ func main() {
 	}
 }
 
-// home is a handler function
+// home is a home function
+// @Summary      Home
+// @Description  Home page
+// @Tags         index
+// @Success      200  "Hello from home page"
+// @Failure 400 {string} string "error: request is not valid"
+// @Failure 404 {string} string "error: no homa data found"
+// @Failure 500 {string} string "error: failed to get something "
+// @Router       / [get]
 func home(w http.ResponseWriter, r *http.Request) {
 	log.Info("Home page accessed")
 	w.Write([]byte("Hello from home page"))
