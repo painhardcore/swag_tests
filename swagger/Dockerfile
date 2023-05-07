@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Build the binary
-RUN go build -o swagger-binary ./swagger/main.go
+RUN go build -mod=readonly -o swagger-binary ./swagger/main.go
 
 # Use a lightweight image for the final image
 FROM alpine:latest
