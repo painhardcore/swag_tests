@@ -1,0 +1,40 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "description": "Home page",
+                "tags": [
+                    "index"
+                ],
+                "summary": "Home",
+                "responses": {
+                    "200": {
+                        "description": "Hello from home page"
+                    },
+                    "400": {
+                        "description": "error: request is not valid",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "404": {
+                        "description": "error: no homa data found",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "500": {
+                        "description": "error: failed to get something ",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
